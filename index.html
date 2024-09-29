@@ -125,6 +125,30 @@
         .social-links a:hover {
             color: #FFD700; /* Gold */
         }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .project {
+                width: 45%; /* Two projects per row on medium screens */
+            }
+            nav a {
+                font-size: 1em; /* Adjust font size for smaller screens */
+                margin: 0 10px; /* Adjust margins */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project {
+                width: 100%; /* One project per row on small screens */
+            }
+            nav a {
+                font-size: 0.9em; /* Further adjust font size for mobile */
+            }
+        }
+
+        .contact-form {
+            width: 90%; /* Make contact form responsive */
+        }
     </style>
 </head>
 <body>
@@ -144,8 +168,8 @@
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>I am Muhammed A. Adediran, a result-oriented Data Scientist and Analyst with over half a decade experience in analyzing and interpreting complex data to drive business decisions. My passion lies in transforming raw data into actionable insights, improving operational efficiency, and solving challenging problems through data. I have a proven track record of working cross-functionally to deploy data models in production environments, offering valuable intelligence that propels business success. Throughout my career, I’ve developed a strong foundation in machine learning, predictive analytics, and data visualization. I am proficient in Python, SQL, Tableau, Excel, and several other tools that allow me to process, analyze, and visualize data effectively. My experience spans across industries, where I’ve helped businesses improve decision-making processes and optimize workflows by developing interactive dashboards, performing ETL processes, and ensuring data integrity. With a background in both data science and business acumen, I am committed to continuously enhancing my skills to implement innovative solutions that align with organizational goals.
-        <p>LET'S WORK TOGETHER TO UNLOCK THE POTENTIALS HIDDEN IN YOUR DATA.
+        <p>I am Muhammed A. Adediran, a result-oriented Data Scientist and Analyst with over half a decade experience in analyzing and interpreting complex data to drive business decisions. My passion lies in transforming raw data into actionable insights, improving operational efficiency, and solving challenging problems through data. I have a proven track record of working cross-functionally to deploy data models in production environments, offering valuable intelligence that propels business success. Throughout my career, I’ve developed a strong foundation in machine learning, predictive analytics, and data visualization. I am proficient in Python, SQL, Tableau, Excel, and several other tools that allow me to process, analyze, and visualize data effectively. My experience spans across industries, where I’ve helped businesses improve decision-making processes and optimize workflows by developing interactive dashboards, performing ETL processes, and ensuring data integrity. With a background in both data science and business acumen, I am committed to continuously enhancing my skills to implement innovative solutions that align with organizational goals.</p>
+        <p>LET'S WORK TOGETHER TO UNLOCK THE POTENTIALS HIDDEN IN YOUR DATA.</p>
     </section>
 
     <!-- Projects Section -->
@@ -154,21 +178,21 @@
         <div class="projects">
             <!-- Project 1 -->
             <div class="project">
-                <h3>forecasting customer churn with actions to retain customers for ConnectTel Telecom</h3>
+                <h3>Forecasting Customer Churn with Actions to Retain Customers for ConnectTel Telecom</h3>
                 <img src="images/Customer Churn.png" alt="Project 1 Image">
                 <p>Developed a predictive model to forecast customer churn for ConnectTel Telecom Company, utilizing Python and machine learning algorithms, visualized trends with charts, and analyzed key insights to better understand factors contributing to churn and improve customer retention strategies.</p>
                 <a href="https://drive.google.com/drive/folders/1Rlklza4MQzv4ZNlpCqDWi6Kdt8Jk8UxS?usp=sharing" target="_blank">View Project</a>
             </div>
             <!-- Project 2 -->
             <div class="project">
-                <h3>sentimenting customer reviews  to predict positive and negative feedback for Ali Express</h3>
+                <h3>Sentimenting Customer Reviews to Predict Positive and Negative Feedback for Ali Express</h3>
                 <img src="images/sentiment.jpg" alt="Project 2 Image">
                 <p>Developed a sentiment analysis model for Ali Express reviews using Bag of Words. Trained a Multinomial Naive Bayes classifier to predict positive and negative sentiments with 92% accuracy. Deployed via Streamlit for real-time classification, and instant customer feedback insights.</p>
                 <a href="https://drive.google.com/drive/folders/1t4hIZXAX99dMoBTJleC9xyE3eSKIqErE?usp=sharing" target="_blank">View Project</a>
             </div>
             <!-- Project 3 -->
             <div class="project">
-                <h3>Cohort analysis to aid customer retention rate for an e-commerce platform</h3>
+                <h3>Cohort Analysis to Aid Customer Retention Rate for an E-commerce Platform</h3>
                 <img src="images/cohort analysis for customer retention.png" alt="Project 3 Image">
                 <p>Performed a cohort analysis for an e-commerce platform by segmenting users into monthly cohorts, creating tables to track retention rates, repeat purchases, and trends over time, and visualizing the data using heat maps and lineplots to interpret insights for improving retention and customer behavior.</p>
                 <a href="https://drive.google.com/drive/folders/1zIELvmAwA5Uj2ChAHvKgS2Dfp-TKpwc_?usp=drive_link" target="_blank">View Project</a>
