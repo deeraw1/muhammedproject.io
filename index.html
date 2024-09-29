@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Abiola Adediran - Data Scientist Portfolio</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #1E3A8A; /* Deep blue */
+            color: #FFD700; /* Gold */
+            padding: 30px;
+            text-align: center;
+            font-size: 1.5em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            margin: 15px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #1E3A8A; /* Deep blue */
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            color: #FFD700; /* Gold */
+        }
+        section {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #1E3A8A; /* Deep blue */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .project {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 15px;
+            width: 30%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .project:hover {
+            transform: scale(1.05);
+        }
+        .project img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .project h3 {
+            color: #1E3A8A; /* Deep blue */
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .project p {
+            color: #666;
+        }
+        footer {
+            background-color: #1E3A8A; /* Deep blue */
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #1E3A8A; /* Deep blue */
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #FFD700; /* Gold */
+        }
+        .social-links {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .social-links a {
+            margin: 0 20px;
+            color: #1E3A8A;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #FFD700; /* Gold */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <p>Muhammed Abiola Adediran Portfolio Website</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#social-links">Contact</a>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am Muhammed A Adediran, a result-oriented Data Scientist and Analyst with over half a decade experience in analyzing and interpreting complex data to drive business decisions. My passion lies in transforming raw data into actionable insights, improving operational efficiency, and solving challenging problems through data. I have a proven track record of working cross-functionally to deploy data models in production environments, offering valuable intelligence that propels business success. Throughout my career, I’ve developed a strong foundation in machine learning, predictive analytics, and data visualization. I am proficient in Python, SQL, Tableau, Excel, and several other tools that allow me to process, analyze, and visualize data effectively. My experience spans across industries, where I’ve helped businesses improve decision-making processes and optimize workflows by developing interactive dashboards, performing ETL processes, and ensuring data integrity. With a background in both data science and business acumen, I am committed to continuously enhancing my skills to implement innovative solutions that align with organizational goals.
+        <p>LET'S WORK TOGETHER TO UNLOCK THE POTENTIALS HIDDEN IN YOUR DATA.
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <!-- Project 1 -->
+            <div class="project">
+                <h3>forecasting customer churn with actions to retain customers for ConnectTel Telecom</h3>
+                <img src="images/Customer Churn.png" alt="Project 1 Image">
+                <p>Developed a predictive model to forecast customer churn for ConnectTel Telecom Company, utilizing Python and machine learning algorithms, visualized trends with charts, and analyzed key insights to better understand factors contributing to churn and improve customer retention strategies.</p>
+                <a href="https://drive.google.com/drive/folders/1Rlklza4MQzv4ZNlpCqDWi6Kdt8Jk8UxS?usp=sharing" target="_blank">View Project</a>
+            </div>
+            <!-- Project 2 -->
+            <div class="project">
+                <h3>sentimenting customer reviews  to predict positive and negative feedback for Ali Express</h3>
+                <img src="images/sentiment.jpg" alt="Project 2 Image">
+                <p>Developed a sentiment analysis model for Ali Express reviews using Bag of Words. Trained a Multinomial Naive Bayes classifier to predict positive and negative sentiments with 92% accuracy. Deployed via Streamlit for real-time classification, and instant customer feedback insights.</p>
+                <a href="https://drive.google.com/drive/folders/1t4hIZXAX99dMoBTJleC9xyE3eSKIqErE?usp=sharing" target="_blank">View Project</a>
+            </div>
+            <!-- Project 3 -->
+            <div class="project">
+                <h3>Cohort analysis to aid customer retention rate for an e-commerce platform</h3>
+                <img src="images/cohort analysis for customer retention.png" alt="Project 3 Image">
+                <p>Performed a cohort analysis for an e-commerce platform by segmenting users into monthly cohorts, creating tables to track retention rates, repeat purchases, and trends over time, and visualizing the data using heat maps and lineplots to interpret insights for improving retention and customer behavior.</p>
+                <a href="https://drive.google.com/drive/folders/1zIELvmAwA5Uj2ChAHvKgS2Dfp-TKpwc_?usp=drive_link" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Links Section -->
+    <section id="social-links" class="social-links">
+        <h2>Connect with Me</h2>
+        <a href="http://linkedin.com/in/muhammedadediran/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/deeraw1" target="_blank">GitHub</a>
+        <a href="mailto:deeraw80@gmail.com">Email Me</a>
+        <a href="tel:+2349123890613">Call Me</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2020-2025 | Muhammed Abiola Adediran | Data Scientist</p>
+    </footer>
+
+</body>
+</html>
