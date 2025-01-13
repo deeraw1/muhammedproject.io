@@ -1,6 +1,45 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+/* Base Styles (Default for larger screens) */
+body {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    #nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container h3 {
+        font-size: 1.5em;
+    }
+
+    .features article {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CT08PQLNE5"></script>
