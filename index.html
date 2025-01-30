@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Google Tag (gtag.js) -->
@@ -10,134 +10,485 @@
         gtag('config', 'G-CT08PQLNE5');
     </script>
 
-    <title>Muhammed Abiola Adediran - Data Scientist Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets1/css/main.css">
+    <title>Muhammed Abiola Adediran - Data Scientist Portfolio</title>
     <link rel="icon" href="images/favicon.webp" type="image/webp">
-</head>
-<body class="is-preload">
+    <style>
+        :root {
+            --primary: #2A3B4F;    /* Deep Navy */
+            --secondary: #3D9970;  /* Sage Green */
+            --accent: #FF6B6B;     /* Coral */
+            --light: #F8F9FA;      /* Light Gray */
+            --dark: #1A252F;       /* Dark Navy */
+            --text: #2D3436;       /* Charcoal */
+        }
 
-    <!-- Header -->
-    <section id="header">
-        <header>
-            <span class="image avatar"><img src="images/me.JPG" alt="Muhammed Abiola Adediran" /></span>
-            <h1 id="logo"><a href="#">Muhammed Abiola Adediran</a></h1>
-            <p>Data Scientist | Data Analyst | Business Analyst</p>
-        </header>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        /* Header Styles */
+        #header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: -3rem;
+        }
+
+        .avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid var(--secondary);
+            margin: 1rem auto;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        /* Navigation */
+        #nav {
+            margin: 2rem 0;
+        }
+
+        #nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        #nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        #nav a:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        
+        .button {
+            position: relative;
+            overflow: hidden;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .icon-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-right: 12px;
+        }
+
+        .main-icon {
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .launch-icon {
+            position: absolute;
+            left: 50%;
+            top: 150%;
+            opacity: 0;
+            transform: translateX(-50%);
+            color: var(--accent);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(61,153,112,0.4);
+        }
+
+        .button:hover .main-icon {
+            transform: translateY(-150%);
+        }
+
+        .button:hover .launch-icon {
+            top: 50%;
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .button:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(61,153,112,0.3);
+        }
+
+        /* Optional: Add particle animation */
+        @keyframes particles {
+            0% { transform: translateY(0) scale(0); opacity: 1; }
+            100% { transform: translateY(-50px) scale(1); opacity: 0; }
+        }
+
+
+        /* Card Styles */
+        .card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            padding: 1.5rem;
+            background: var(--light);
+            border-radius: 0.75rem;
+            border-left: 4px solid var(--secondary);
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        /* Project Cards */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .project-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%);
+            z-index: 1;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            color: white;
+            z-index: 2;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 2.2rem; color: var(--primary); }
+        h3 { font-size: 1.5rem; }
+
+        
+
+        @media (max-width: 768px) {
+            #header { padding: 3rem 1rem; }
+            .avatar { width: 120px; height: 120px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+        }
+
+    /* Add this CSS to your existing styles */
+        #contact {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: var(--primary);
+            color: white;
+            margin-top: 4rem;
+        }
+
+        .contact-card {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            font-size: 1.75rem;
+            color: rgba(255,255,255,0.9);
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+        }
+
+        .social-icon:hover {
+            color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            #contact {
+            padding: 3rem 1rem;
+        }
+            
+        .social-icon {
+            font-size: 1.5rem;
+        }
+        }
+  
+</style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <img src="images/me.jpg" alt="Muhammed Abiola Adediran" class="avatar">
+        <h1>Muhammed Abiola Adediran</h1>
+        <p>Data Scientist | Data Analyst | Business Analyst</p>
+        
         <nav id="nav">
             <ul>
-                <li><a href="#one">About</a></li>
-                <li><a href="#two">Skills</a></li>
-                <li><a href="#three">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Expertise</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Connect</a></li>
             </ul>
         </nav>
-        <footer>
-            <ul class="icons">
-                <li><a href="tel:+2349123890613" class="icon solid fa-phone"><span class="label">Call</span></a></li>
-                <li><a href="http://linkedin.com/in/muhammedadediran/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                <li><a href="mailto:deeraw80@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-                <li><a href="https://x.com/DeeRaw01?t=230GNPcfQDPqf0xcxZEYZA&s=09" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-            </ul>
-        </footer>
-    </section>
-
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- About Section -->
-        <section id="one" class="container">
-            <header class="major">
+    </header>
+        <main class="container">
+            <!-- About Section -->
+            <section id="about" class="card">
                 <h2>About Me</h2>
-            </header>
-            <p>I’m Muhammed A. Adediran, a Data Scientist and Senior Data Analyst with almost half decade of experience transforming data into actionable insights. I specialize in creating data-driven solutions that bridge the gap between complex analytics and impactful business decisions.</p>
-            <p>Explore my professional journey by downloading my CV below:</p>
-            <a href="assets1/Muhammed.pdf" target="_blank" class="button">Download My CV</a>
-        </section>
+                <p class="lead-text">
+                    I'm Muhammed A. Adediran, a Data Scientist and Senior Data Analyst with almost 5 years of experience, and a sharp focus on transforming data into strategic insights that drive business impact. With expertise in machine learning, predictive analytics, and data-driven decision-making, I craft solutions that optimize performance and unlock new opportunities.
 
-        <!-- Skills Section -->
-        <section id="two" class="container">
-            <header class="major">
-                <h2>Skills</h2>
-            </header>
-            <ul class="feature-icons">
-                <!-- Technical Skills -->
-                <li class="icon solid fa-code">Python</li>
-                <li class="icon solid fa-database">SQL</li>
-                <li class="icon solid fa-network-wired">Machine Learning</li>
-                <li class="icon solid fa-cloud">Cloud Platforms (AWS, GCP)</li>
+                    My experience in consultation as a Data expert, spans industries like finance, real estate, energy, e-commerce, health, and technology, where I’ve developed models for customer retention, risk assessment, and revenue growth. I thrive at the intersection of data science and business strategy, leveraging analytics to guide innovation, enhance operational efficiency, and deliver measurable results.
 
-                <!-- Data and Analytics Skills -->
-                <li class="icon solid fa-chart-bar">Data Analysis</li>
-                <li class="icon solid fa-table">Data Visualization</li>
-                <li class="icon solid fa-layer-group">Big Data Tools (Hadoop, Spark)</li>
-                <li class="icon solid fa-chart-line">Time Series Analysis</li>
-
-                <!-- Workflow and Collaboration -->
-                <li class="icon solid fa-cogs">Workflow Automation (Airflow, Prefect)</li>
-                <li class="icon solid fa-code-branch">Version Control (Git, GitHub)</li>
-                <li class="icon solid fa-desktop">Dashboarding (Tableau, Power BI)</li>
-                <li class="icon solid fa-lock">Data Security & Compliance</li>
-
-                <!-- Soft Skills -->
-                <li class="icon solid fa-lightbulb">Problem-Solving</li>
-                <li class="icon solid fa-handshake">Collaboration</li>
-                <li class="icon solid fa-comments">Effective Communication</li>
-                <li class="icon solid fa-brain">Critical Thinking</li>
-            </ul>
-        </section>
-
+                    I’m always exploring new ways to push the boundaries of data science, whether through advanced modeling, cloud-based pipelines, or intuitive data applications. Let’s connect and build something impactful together!
+                </p>
+            </section>        
+                <a href="assets1/Muhammed.pdf" download class="button">
+                    <span class="icon-wrapper">
+                        <i class="fas fa-file-download main-icon"></i>
+                    </span>
+                    Download My CV
+                </a>
+                   
+            </section>
+    
+            <!-- Skills Section -->
+            <section id="skills" class="card">
+                <h2>Core Competencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-code fa-lg" style="color: var(--secondary);"></i>
+                        <div>
+                            <h4>Python Development</h4>
+                            <p>Pandas, NumPy, Scikit-learn for advanced data manipulation</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database fa-lg" style="color: var(--secondary);"></i>
+                        <div>
+                            <h4>SQL & Database Management</h4>
+                            <p>Optimized query writing and database architecture</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-brain fa-lg" style="color: var(--secondary);"></i>
+                        <div>
+                            <h4>Machine Learning</h4>
+                            <p>Predictive modeling with XGBoost, TensorFlow, PyTorch</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-cloud fa-lg" style="color: var(--secondary);"></i>
+                        <div>
+                            <h4>Cloud Platforms</h4>
+                            <p>AWS, GCP deployment and management</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-line fa-lg" style="color: var(--secondary);"></i>
+                        <div>
+                            <h4>Data Visualization</h4>
+                            <p>Tableau, Power BI, and Matplotlib dashboards</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-cogs fa-lg" style="color: var(--secondary);"></i>
+                        <div>
+                            <h4>Workflow Automation</h4>
+                            <p>Airflow, Prefect, and CI/CD pipelines</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-lightbulb fa-lg" style="color: var(--secondary);"></i>
+                        <div>
+                            <h4>Problem Solving</h4>
+                            <p>Creative solutions for complex business challenges</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-users fa-lg" style="color: var(--secondary);"></i>
+                        <div>
+                            <h4>Cross-functional Collaboration</h4>
+                            <p>Bridging technical and business teams effectively</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         <!-- Projects Section -->
-        <section id="three" class="container">
-            <header class="major">
-                <h2>Projects</h2>
-            </header>
-            <div class="features">
-                <article>
-                    <a href="#" class="image"><img src="images/Customer Churn.png" alt="Customer Churn" /></a>
-                    <div class="inner">
-                        <h4>Forecasting Customer Churn</h4>
-                        <p>Developed a machine learning model to predict customer churn for ConnectTel Telecom, providing actionable insights to enhance retention strategies.</p>
-                        <a href="https://drive.google.com/drive/folders/1Rlklza4MQzv4ZNlpCqDWi6Kdt8Jk8UxS?usp=sharing" target="_blank">View Project</a>
-                    </div>
-                </article>
-                <article>
-                    <a href="#" class="image"><img src="images/sentiment.jpg" alt="Sentiment Analysis" /></a>
-                    <div class="inner">
-                        <h4>Sentiment Analysis for Ali Express</h4>
-                        <p>Created a sentiment analysis tool using TF-IDF and Logistic Regression, achieving 94% accuracy. Deployed via Streamlit for real-time feedback analysis.</p>
-                        <a href="https://drive.google.com/drive/folders/1t4hIZXAX99dMoBTJleC9xyE3eSKIqErE?usp=sharing" target="_blank">View Project</a>
-                    </div>
-                </article>
-                <article>
-                    <a href="#" class="image"><img src="images/cohort analysis for customer retention.png" alt="Cohort Analysis" /></a>
-                    <div class="inner">
-                        <h4>Cohort Analysis for E-commerce</h4>
-                        <p>Conducted cohort analysis to visualize retention rates and behavioral trends, aiding in strategic planning for customer retention.</p>
-                        <a href="https://drive.google.com/drive/folders/1zIELvmAwA5Uj2ChAHvKgS2Dfp-TKpwc_?usp=sharing" target="_blank">View Project</a>
-                    </div>
-                </article>
+<section id="projects" class="card">
+    <h2>Signature Projects</h2>
+    <div class="projects-grid">
+        <!-- UN Project -->
+        <article class="project-card">
+            <img src="images/Child.jpg" alt="UN Africa's Child Mortality Rate">
+            <div class="project-content">
+                <h3>UN Africa's Child Mortality Prediction</h3>
+                <a href="https://drive.google.com/drive/folders/1xoDXnzfFjFfgGMa3yQ0849yiTEAJ1jJ7?usp=sharing" 
+                   class="project-link" 
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   View Project →
+                </a>
             </div>
-        </section>
+        </article>
 
+        <!-- Customer Churn Project -->
+        <article class="project-card">
+            <img src="images/Customer Churn.png" alt="Customer Churn Analysis Dashboard">
+            <div class="project-content">
+                <h3>Forecasting Customer Churn</h3>
+                <a href="https://drive.google.com/drive/folders/1Rlklza4MQzv4ZNlpCqDWi6Kdt8Jk8UxS?usp=sharing" 
+                   class="project-link" 
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View Project →
+                </a>
+            </div>
+        </article>
+<!-- Sentiment Analysis Project -->
+<article class="project-card">
+    <img src="images/sentiment.jpg" alt="Sentiment Analysis Visualization">
+    <div class="project-content">
+        <h3>E-commerce Sentiment Analysis</h3>
+        <a href="https://drive.google.com/drive/folders/1t4hIZXAX99dMoBTJleC9xyE3eSKIqErE?usp=sharing" 
+           class="project-link" 
+           target="_blank"
+           rel="noopener noreferrer">
+            View Project →
+        </a>
     </div>
+</article>
+<!-- StartUp Project -->
+<article class="project-card">
+    <img src="images/Startup.jpg" alt="StartUp Valuation Analysis">
+    <div class="project-content">
+        <h3>StartUp Valuation Analysis</h3>
+        <a href="https://drive.google.com/drive/folders/1Ue2JR5wtaPKNCqCM5qT02m7m5Oucn5Ay?usp=sharing" 
+           class="project-link" 
+           target="_blank"
+           rel="noopener noreferrer">
+            View Project →
+        </a>
+    </div>
+</article>
 
-    <!-- Footer -->
-    <section id="footer" class="container">
-        <footer>
-            <ul class="copyright">
-                <li>&copy; 2025 Muhammed Abiola Adediran. All Rights Reserved.</li>
-            </ul>
-        </footer>
-    </section>
+<!-- Cohort Analysis Project -->
+        <article class="project-card">
+            <img src="images/cohort analysis for customer retention.png" alt="Cohort Analysis Dashboard">
+            <div class="project-content">
+                <h3>Customer Retention Analysis</h3>
+                <a href="https://drive.google.com/drive/folders/1zIELvmAwA5Uj2ChAHvKgS2Dfp-TKpwc_?usp=sharing" 
+                   class="project-link" 
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   View Project →
+    </div>
+</section>
+</main>
 
-    <!-- Scripts -->
-    <script src="assets1/js/jquery.min.js"></script>
-    <script src="assets1/js/jquery.scrollex.min.js"></script>
-    <script src="assets1/js/jquery.scrolly.min.js"></script>
-    <script src="assets1/js/browser.min.js"></script>
-    <script src="assets1/js/breakpoints.min.js"></script>
-    <script src="assets1/js/util.js"></script>
-    <script src="assets1/js/main.js"></script>
+    <!-- Footer Section -->
+<footer id="contact" class="container">
+    <div class="contact-card">
+        <h3>Let's Connect</h3>
+        <div class="social-links">
+            <a href="http://linkedin.com/in/muhammedadediran/" class="social-icon" aria-label="LinkedIn Profile">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:deeraw80@gmail.com" class="social-icon" aria-label="Email Address">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://x.com/DeeRaw01" class="social-icon" aria-label="Twitter Profile">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="tel:+2349123890613" class="social-icon" aria-label="Phone Number">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+    </div>
+    <p class="copyright">&copy; 2025 Muhammed Abiola Adediran. All rights reserved.</p>
+</footer>
 </body>
 </html>
